@@ -2,6 +2,8 @@
 #include "Item.h"
 #include "Types.h"
 #include "Die.h"
+
+//the base class for both ranged and melee weapons
 class Weapon :
 	public Item
 {
