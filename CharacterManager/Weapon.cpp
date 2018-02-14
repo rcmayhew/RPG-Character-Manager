@@ -9,6 +9,7 @@ Weapon::Weapon()
 	range = 0;
 }
 
+// is only used to be called by the inherited classes
 Weapon::Weapon(Die die, DamageType dt, Size s, WClass wc, int c, int cc, int att_bon, int r, 
 	int bon_dam, double w, int co, int u, std::string n, std::string d) : 
 		Item(w,u,n,d,co)
@@ -28,12 +29,15 @@ Weapon::~Weapon()
 {
 }
 
+
+//function that rolls the die for the attack
 int Weapon::attack()
 {
 	std::shared_ptr<Die> attack_die = std::make_shared <Die>(1, 20);
 	return attack_die->roll();
 }
 
+//checks crit and returns total attack
 int Weapon::attack(bool & critical)
 {
 	int base = this->attack();
@@ -41,6 +45,7 @@ int Weapon::attack(bool & critical)
 	return base + attack_bonus;
 }
 
+//main damage call
 int Weapon::damage(bool critical, int str_mod)
 {
 	int total = 0;
@@ -51,6 +56,7 @@ int Weapon::damage(bool critical, int str_mod)
 	return total;
 }
 
+//interior damage function
 int Weapon::damage(int str_mod)
 {
 	return base_damage.roll() + bonus_damage;
