@@ -9,10 +9,15 @@ protected:
 	Die base_damage;
 	int attack_bonus;
 	int range;
-	Size size;
+	int bonus_damage = 0;
+	Size size = Size::Medium;
+	//magical damage
 
 public:
 	Weapon();
+	Weapon(Die die, int att_bon, int r, int bon_dam, 
+		double w, int u, std::string n, std::string d);
 	virtual ~Weapon();
+	virtual int attack() = 0;
+	virtual int damage() = 0;
 };
-

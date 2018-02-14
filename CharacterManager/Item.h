@@ -17,9 +17,9 @@ protected:
 	//magic is going to be emplemted after the general framework is laid out.
 public:
 	Item(double, int, std::string, std::string);
+	Item();
 	virtual ~Item();
 	virtual double total_weight();
 	virtual void use();
 	virtual std::string print();
 };
-

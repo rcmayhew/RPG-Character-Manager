@@ -11,6 +11,15 @@ Item::Item(double w, int u, std::string n, std::string d)
 	description = d;
 }
 
+Item::Item()
+{
+	//uses of -1 sign that is has no uses
+	weight = 0;
+	uses = -1;
+	name = "unnamed";
+	description = "Undeclared item";
+}
+
 
 Item::~Item()
 {
