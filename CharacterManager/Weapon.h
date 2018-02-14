@@ -1,7 +1,5 @@
 #pragma once
 #include "Item.h"
-#include "Types.h"
-#include "Die.h"
 
 //the base class for both ranged and melee weapons
 class Weapon :
@@ -13,11 +11,12 @@ protected:
 	int range;
 	int bonus_damage = 0;
 	Size size = Size::Medium;
+	WClass wclass;
 	//magical damage
 
 public:
 	Weapon();
-	Weapon(Die die, int att_bon, int r, int bon_dam, 
+	Weapon(Die die, Size s, WClass wc, int att_bon, int r, int bon_dam, 
 		double w, int u, std::string n, std::string d);
 	virtual ~Weapon();
 	virtual int attack() = 0;

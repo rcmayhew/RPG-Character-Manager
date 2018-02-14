@@ -18,11 +18,34 @@ enum class Size
 
 enum class WSpecials
 {
+	None,
 	Blocking,
 	Brace,
+	Deadly,
 	Disarm,
 	Distracting,
+	Double,
+	Fragile,
+	Grapple,
+	Monk,
 	Nonlethal,
 	Performance,
+	Reach,
+	Sunder,
 	Trip
+};
+
+enum class WClass
+{
+	Simple,
+	Martial,
+	Exotic
+};
+
+enum class MeleeType
+{
+	Unarmed,
+	Light,
+	OneHanded,
+	Twohanded
 };
