@@ -2,13 +2,14 @@
 #include "Item.h"
 
 
-Item::Item(double w, int u, std::string n, std::string d)
+Item::Item(double w, int u, std::string n, std::string d, int c)
 {
 	//uses of -1 sign that is has no uses
 	weight = w;
 	uses = u;
 	name = n;
 	description = d;
+	cost = c;
 }
 
 Item::Item()

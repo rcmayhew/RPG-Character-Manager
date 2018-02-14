@@ -49,3 +49,10 @@ enum class MeleeType
 	OneHanded,
 	Twohanded
 };
+
+enum class DamageType
+{
+	B,
+	P,
+	S
+};

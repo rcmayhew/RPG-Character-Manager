@@ -1,5 +1,5 @@
 #pragma once
-
+#include <string>
 //This class is for rolling multiple of the same die. If there are more than
 //one die size, there will need to be more than one class of die.
 class Die
@@ -19,5 +19,7 @@ public:
 	~Die();
 	//totals the dice that were rolled
 	int roll();
+	//allows printing of dice
+	std::string to_string();
 };
 

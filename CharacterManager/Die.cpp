@@ -33,3 +33,8 @@ int Die::roll()
 	}
 	return total;
 }
+
+std::string Die::to_string()
+{
+	return std::to_string(num_of_dice) + 'd' + std::to_string(size_of_dice);
+}

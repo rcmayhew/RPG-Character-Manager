@@ -15,10 +15,11 @@ protected:
 	int uses;
 	std::string name;
 	std::string description;
+	int cost;
 	//Condition magic
 	//magic is going to be emplemted after the general framework is laid out.
 public:
-	Item(double, int, std::string, std::string);
+	Item(double, int, std::string, std::string, int c);
 	Item();
 	virtual ~Item();
 	virtual double total_weight();
