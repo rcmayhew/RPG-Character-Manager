@@ -1,6 +1,6 @@
 #pragma once
 
-//this class is for rolling multiple of the same die. If there are mroe than
+//This class is for rolling multiple of the same die. If there are more than
 //one die size, there will need to be more than one class of die.
 class Die
 {

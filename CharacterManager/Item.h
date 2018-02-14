@@ -1,6 +1,10 @@
 #pragma once
 #include "Stuff.h"
 #include <string>
+
+//This is the default class for all items. It is the highest level non-pure
+//virtual class. Items that are not worn nor equipped are Item class. If they
+//are worn, they shoudl be a child class.
 class Item :
 	public Stuff
 {
