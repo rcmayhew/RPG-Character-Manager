@@ -20,6 +20,8 @@ public:
 		HandType fireh, int str);
 	virtual ~Ranged();
 
+	std::string print_str();
+
 	//prints out the information on the weapon
 	virtual std::string print();
 	///featueres that might be added in the future

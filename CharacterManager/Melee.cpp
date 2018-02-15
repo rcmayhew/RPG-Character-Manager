@@ -25,11 +25,11 @@ Melee::Melee(Die die, DamageType dt, Size s,  WClass wc, int c, int cc, int att_
 std::string Melee::print()
 {
 	std::string printout;
-	printout = name + '\n'
+	printout = name + '\t'
 		+ std::to_string(cost) + " gp\t"
 		+ base_damage.to_string() + '\t'
-		+ this->print_crit() + '\t'
-		+ "Weight: " + std::to_string(weight) + '\n'
+		+ print_crit() + '\t'
+		+ std::to_string(weight) + " lbs. \n"
 		+ description;
 	return printout;
 }

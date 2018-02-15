@@ -1,5 +1,5 @@
 #pragma once
-
+#include <string>
 //This is the list of all size categories in pathfinder.
 //almost all items that are worn by the character and 
 //the character them selves are affected by their size.
@@ -77,4 +77,46 @@ enum class RangedClass
 	Firearms,
 	Sling,
 	Thrown
+};
+
+enum class ArmorType
+{
+	Shield,
+	Light,
+	Medium,
+	Heavy
+};
+
+enum class Slots
+{
+	Head,
+	Headband,
+	Eyes,
+	Shoulders,
+	Neck,
+	Chest,
+	Body,
+	Armor,
+	Belt,
+	Wrists,
+	Hands,
+	RRing,
+	LRing,
+	Feet
+};
+
+struct ArmorSpeed
+{
+	int slow;
+	int fast;
+	std::string to_string()
+	{
+		return std::to_string(fast) + "ft. " + std::to_string(slow) + "ft. ";
+	}
+	ArmorSpeed() : slow(20), fast(30)
+	{
+	}
+	ArmorSpeed(int f, int s) : slow(s), fast(f)
+	{
+	}
 };

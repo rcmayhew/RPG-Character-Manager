@@ -2,7 +2,6 @@
 #include "Stuff.h"
 #include "Types.h"
 #include "Die.h"
-#include <string>
 
 //This is the default class for all items. It is the highest level non-pure
 //virtual class. Items that are not worn nor equipped are Item class. If they

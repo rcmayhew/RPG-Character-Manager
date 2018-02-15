@@ -148,6 +148,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Ammo.h" />
+    <ClInclude Include="Armor.h" />
     <ClInclude Include="Die.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Melee.h" />
@@ -157,9 +158,11 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Types.h" />
     <ClInclude Include="Weapon.h" />
+    <ClInclude Include="Wearable.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Ammo.cpp" />
+    <ClCompile Include="Armor.cpp" />
     <ClCompile Include="CharacterManager.cpp" />
     <ClCompile Include="Die.cpp" />
     <ClCompile Include="Item.cpp" />
@@ -173,6 +176,7 @@
     </ClCompile>
     <ClCompile Include="Stuff.cpp" />
     <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="Wearable.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

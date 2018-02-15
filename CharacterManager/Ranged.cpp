@@ -35,14 +35,20 @@ Ranged::~Ranged()
 {
 }
 
+std::string Ranged::print_str()
+{
+	if (str_bonus < 1) return "";
+	return " + " + std::to_string(str_bonus);
+}
+
 std::string Ranged::print()
 {
 	std::string printout;
-	printout = name + '\n'
+	printout = name + '\t'
 		+ std::to_string(cost) + " gp\t"
-		+ base_damage.to_string() + std::to_string(str_bonus) + '\t'
-		+ this->print_crit() + '\t'
-		+ "Weight: " + std::to_string(weight) + '\n'
+		+ base_damage.to_string() + print_str() + '\t'
+		+ print_crit() + "\t"
+		+ std::to_string(weight) + " lbs. \n"
 		+ description;
 	return printout;
 }

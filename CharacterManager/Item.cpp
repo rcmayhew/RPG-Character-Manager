@@ -39,8 +39,8 @@ void Item::use()
 std::string Item::print()
 {
 	std::string printout;
-	printout = name + '\n'
-		+ "Weight: " + std::to_string(weight) + '\n'
+	printout = name + '\t'
+		+ std::to_string(weight) + " lbs \t"
 		+ "Uses left: " + std::to_string(uses) + '\n'
 		+ description;
 	return printout;

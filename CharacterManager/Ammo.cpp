@@ -8,7 +8,7 @@ Ammo::Ammo(double w_per, int amount, std::string n, std::string d, int cost_per,
 	ranged_class = rangedc;
 }
 
-Ammo::Ammo() : Item(0.15, 1, "arrow, common", "Regular arrow used in bows", 0.05)
+Ammo::Ammo() : Item(0.15, 1, "arrow, common", "Regular arrow used in bows", 1)
 {
 	ranged_class = RangedClass::Bow;
 }
