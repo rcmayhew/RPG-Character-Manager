@@ -13,6 +13,19 @@ Armor::Armor() : Wearable(15.0, -1, "leather", "Leather armor is made up of piec
 	spell_fail = 10;
 }
 
+Armor::Armor(double weight, int uses, std::string name, std::string description,
+	int cost, ArmorType armort, Slots slot, int ACb, int maxd, int armorc,
+	int spellf, ArmorSpeed armors) : Wearable(weight, uses, name, description, cost)
+{
+	armor_type = armort;
+	slots = slot;
+	AC_bonus = ACb;
+	max_dex = maxd;
+	armor_check = armorc;
+	spell_fail = spellf;
+	armor_speed = armors;
+}
+
 
 Armor::~Armor()
 {
