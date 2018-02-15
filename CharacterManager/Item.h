@@ -19,7 +19,7 @@ protected:
 	//Condition magic
 	//magic is going to be emplemted after the general framework is laid out.
 public:
-	Item(double, int, std::string, std::string, int c);
+	Item(double weight, int uses, std::string name, std::string description, int cost);
 	Item();
 	virtual ~Item();
 	virtual double total_weight();

@@ -9,6 +9,7 @@ protected:
 	//extra damage
 public:
 	Ammo();
+	Ammo(double, int, std::string, std::string, int, RangedClass);
 	//number of uses are the amount of arrows left
 	virtual void use();
 	void add_ammo();

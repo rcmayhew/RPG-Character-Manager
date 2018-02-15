@@ -1,8 +1,14 @@
 #include "stdafx.h"
 #include "Ammo.h"
 
+Ammo::Ammo(double w_per, int amount, std::string n, std::string d, int cost_per, 
+	RangedClass rangedc) :
+	Item(w_per, amount, n, d, cost_per)
+{
+	ranged_class = rangedc;
+}
 
-Ammo::Ammo()
+Ammo::Ammo() : Item(0.15, 1, "arrow, common", "Regular arrow used in bows", 0.05)
 {
 	ranged_class = RangedClass::Bow;
 }
