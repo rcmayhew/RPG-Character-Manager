@@ -6,7 +6,7 @@ Gear::Gear() : Wearable(1, -1, "Mask", "Gala events are where one may see the "
 	"most outlandish and stylish of masks, but simpler masks may be found "
 	"wherever local customs permit. They range from small bits of fabric that "
 	"cover only a portion of the face to elaborate constructions that cover "
-	"the entire face or head." )
+	"the entire face or head.", 50)
 {
 	slots = Slots::Eyes;
 }
