@@ -5,13 +5,14 @@ class Melee :
 {
 protected:
 	//the "handedness" of the weapon. i.e. two handed weapon
-	MeleeType meleetype;
+	HandType meleetype;
 public:
 	//default constructor, build a regular dagger
 	Melee();
 	//allows any melee weapon to be imputted into the system
-	Melee(MeleeType mt, Die die, DamageType dt, Size s, WClass wc, int c, int cc, int att_bon, int bon_dam,
-		double w, int co, std::string n, std::string d);
+	Melee(Die die, DamageType dt, Size s, WClass wc, int c,
+		int cc, int att_bon, int bon_dam, double w, int co, std::string n,
+		std::string d, HandType mt);
 	virtual ~Melee();
 	//prints out the information on the weapon
 	virtual std::string print();

@@ -32,8 +32,9 @@ public:
 	//default constructor. builds nothing
 	Weapon();
 	//constructor that is used by the inherited classes. Calls the Item constructor
-	Weapon(Die die, DamageType dt, Size s, WClass wc, int c, int cc, int att_bon, int r, int bon_dam, 
-		double w, int co, int u, std::string n, std::string d);
+	Weapon(Die die, DamageType dt, Size s, WClass wc, int crit_mult, 
+		int crit_range, int att_bon, int wep_range, int bon_dam, 
+		double pounds, int cost, int uses, std::string wep_name, std::string d);
 	//using shared pointers so not will be called
 	virtual ~Weapon();
 	

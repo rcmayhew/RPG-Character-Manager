@@ -42,7 +42,7 @@ enum class WClass
 	Exotic
 };
 
-enum class MeleeType
+enum class HandType
 {
 	Unarmed,
 	Light,
@@ -55,4 +55,14 @@ enum class DamageType
 	B,
 	P,
 	S
+};
+
+enum class Actions
+{
+	Free,
+	Swift,
+	Move,
+	Standard,
+	FullRound,
+	EntireRound
 };

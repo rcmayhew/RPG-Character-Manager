@@ -27,7 +27,7 @@ int Die::roll_single()
 int Die::roll()
 {
 	int total = 0;
-	for (size_t i = 0; i < num_of_dice; ++i)
+	for (int i = 0; i < num_of_dice; ++i)
 	{
 		total += roll_single();
 	}
