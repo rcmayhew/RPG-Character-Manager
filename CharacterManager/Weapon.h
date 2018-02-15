@@ -2,6 +2,8 @@
 #include "Item.h"
 #include <memory>
 
+
+
 //the base class for both ranged and melee weapons
 class Weapon :
 	public Item

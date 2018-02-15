@@ -66,3 +66,15 @@ enum class Actions
 	FullRound,
 	EntireRound
 };
+
+enum class RangedClass
+{
+	ArrowTube,
+	Atlatl,
+	Blowgun,
+	Bow,
+	CrossBow,
+	Firearms,
+	Sling,
+	Thrown
+};

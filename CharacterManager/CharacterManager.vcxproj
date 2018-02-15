@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Ammo.h" />
     <ClInclude Include="Die.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Melee.h" />
@@ -158,6 +159,7 @@
     <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Ammo.cpp" />
     <ClCompile Include="CharacterManager.cpp" />
     <ClCompile Include="Die.cpp" />
     <ClCompile Include="Item.cpp" />
