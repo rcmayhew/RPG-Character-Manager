@@ -153,7 +153,9 @@
     <ClInclude Include="Gear.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Melee.h" />
+    <ClInclude Include="Quiver.h" />
     <ClInclude Include="Ranged.h" />
+    <ClInclude Include="SmallCollection.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Stuff.h" />
     <ClInclude Include="targetver.h" />
@@ -169,7 +171,9 @@
     <ClCompile Include="Gear.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Melee.cpp" />
+    <ClCompile Include="Quiver.cpp" />
     <ClCompile Include="Ranged.cpp" />
+    <ClCompile Include="SmallCollection.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
