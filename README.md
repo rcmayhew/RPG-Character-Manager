@@ -1,5 +1,5 @@
 # RPG-Character-Manager
-This is a program designed to make pathfinder characters digital so to eventually build a digital encounter manager. 
+This is a program designed to make pathfinder characters digital so to eventually build a digital encounter manager.
 
 # Current to do list
 1. Finish the item data structures
