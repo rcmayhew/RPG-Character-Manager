@@ -15,3 +15,8 @@ This is a program designed to make pathfinder characters digital so to eventuall
 * Full character management
 * Initive tracker
 
+# Need to fix
+* countings uses and ammo count needs to be seperated
+* add comments to classes that are missing it
+* change some shared_pointers to unique or weak pointers
+
