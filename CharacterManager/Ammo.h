@@ -1,5 +1,6 @@
 #pragma once
 #include "Item.h"
+#include <memory>
 class Ammo :
 	public Item
 {
@@ -14,5 +15,6 @@ public:
 	virtual void use();
 	void add_ammo();
 	virtual ~Ammo();
+	Ammo& operator+=(std::shared_ptr<Ammo>);
 };
 

@@ -27,3 +27,9 @@ void Ammo::add_ammo()
 Ammo::~Ammo()
 {
 }
+
+Ammo& Ammo::operator+=(std::shared_ptr<Ammo> l)
+{
+	this->uses += l->uses;
+	return *this;
+}

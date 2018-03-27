@@ -24,4 +24,5 @@ public:
 	virtual double total_weight();
 	virtual void use();
 	virtual std::string print();
+	std::string print_name() { return name; }
 };

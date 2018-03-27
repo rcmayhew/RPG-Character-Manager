@@ -54,9 +54,6 @@
     <ClInclude Include="Gear.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SmallCollection.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Quiver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -96,9 +93,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Gear.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SmallCollection.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Quiver.cpp">
