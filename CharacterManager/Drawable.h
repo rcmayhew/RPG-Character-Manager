@@ -11,6 +11,10 @@ typedef std::shared_ptr<Weapon> Element;
 typedef std::unordered_map<std::string, Element> Container;
 //vecotr of all ammor that can be used with current weapon
 typedef std::vector <Element> Available;
+
+//This is the class to manager and hold all items that are weapons. 
+//Even though the class name is drawable, this class does not handle 
+//items like wands and potions that are drawable but not weapons.
 class Drawable :
 	public Stuff
 {
