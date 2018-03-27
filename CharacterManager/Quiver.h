@@ -1,7 +1,7 @@
 #pragma once
 #include "Stuff.h"
 #include "Ammo.h"
-#include <algorithm>
+//#include <algorithm>
 #include <unordered_map>
 #include <memory>
 
@@ -9,8 +9,10 @@
 typedef std::shared_ptr<Ammo> Element;
 //unordered_map that uses the Element name for the key
 typedef std::unordered_map<std::string, Element> Container;
+//vecotr of all ammor that can be used with current weapon
+typedef std::vector <Element> Available;
 
-
+///need to add a firmer interface for the caller
 //Class to hold all ammo that is used by a ranged weapon. Uses an unordered_map
 //under the hood.
 class Quiver :
@@ -20,16 +22,39 @@ private:
 	//The actual quiver that holds the ammo.
 	//holds Element in an unordered map
 	Container collection;
+	
+	//current ammo type that wants to be used. 
+	//will be used first
+	Element current = nullptr;
 
 public:
 	//adds ammo to the list, is called by add_item in the Inventory class
 	void add_ammo(Element a);
+	
 	//makes sure the found element is in the map
 	bool found(Element);
-	//need to add
-	//delete ammo
+	
+	//removes an elment by object
+	void remove_element(Element a);
+	
+	//removes an elment by stirng
+	void remove_element(std::string);
+	
 	//use ammo
+	Returns use_ammo();
+	
+	//select specific ammo for use
+	Available & search_ammo(RangedClass);
+
+	//should only select ammo that is in the collection
+	Returns select_ammo(Element);
+	
 	//find ammo for rangedtype
+	//returns rangedtype for attack caller function
+	RangedClass type();
+
+	std::string print();
+	//starts out empty
 	Quiver();
 	virtual ~Quiver();
 };

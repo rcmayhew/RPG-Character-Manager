@@ -45,3 +45,8 @@ std::string Item::print()
 		+ description;
 	return printout;
 }
+
+int Item::uses_left()
+{
+	return uses;
+}

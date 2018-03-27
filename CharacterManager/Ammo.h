@@ -15,6 +15,7 @@ public:
 	virtual void use();
 	void add_ammo();
 	virtual ~Ammo();
+	RangedClass type();
 	Ammo& operator+=(std::shared_ptr<Ammo>);
 };
 

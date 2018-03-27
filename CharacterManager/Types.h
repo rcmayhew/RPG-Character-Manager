@@ -75,6 +75,7 @@ enum class RangedClass
 	Bow,
 	CrossBow,
 	Firearms,
+	Cartridge,
 	Sling,
 	Thrown
 };
@@ -119,4 +120,11 @@ struct ArmorSpeed
 	ArmorSpeed(int f, int s) : slow(s), fast(f)
 	{
 	}
+};
+
+enum class Returns
+{
+	Exist,
+	Used,
+	Error
 };

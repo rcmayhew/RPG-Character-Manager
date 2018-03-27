@@ -28,8 +28,13 @@ Ammo::~Ammo()
 {
 }
 
-Ammo& Ammo::operator+=(std::shared_ptr<Ammo> l)
+Ammo& Ammo::operator+=(std::shared_ptr<Ammo> lhs)
 {
-	this->uses += l->uses;
+	this->uses += lhs->uses;
 	return *this;
+}
+
+RangedClass Ammo::type()
+{
+	return ranged_class;
 }

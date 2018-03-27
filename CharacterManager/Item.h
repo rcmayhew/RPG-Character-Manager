@@ -23,6 +23,7 @@ public:
 	virtual ~Item();
 	virtual double total_weight();
 	virtual void use();
+	int uses_left();
 	virtual std::string print();
 	std::string print_name() { return name; }
 };
