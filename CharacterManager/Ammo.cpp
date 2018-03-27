@@ -24,8 +24,18 @@ void Ammo::add_ammo()
 }
 
 
+double Ammo::total_weight()
+{
+	return uses * weight;
+}
+
 Ammo::~Ammo()
 {
+}
+
+void Ammo::add_ammo(std::shared_ptr<Ammo> lhs)
+{
+	this->uses += lhs->uses;
 }
 
 Ammo& Ammo::operator+=(std::shared_ptr<Ammo> lhs)
@@ -37,4 +47,14 @@ Ammo& Ammo::operator+=(std::shared_ptr<Ammo> lhs)
 RangedClass Ammo::type()
 {
 	return ranged_class;
+}
+
+std::string Ammo::print()
+{
+	std::string printout;
+	printout = name + '\t'
+		+ std::to_string(weight) + " lbs \t"
+		+ "Ammo left: " + std::to_string(uses) + '\n'
+		+ description;
+	return printout;
 }

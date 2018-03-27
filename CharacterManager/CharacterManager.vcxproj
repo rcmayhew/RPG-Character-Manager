@@ -150,6 +150,7 @@
     <ClInclude Include="Ammo.h" />
     <ClInclude Include="Armor.h" />
     <ClInclude Include="Die.h" />
+    <ClInclude Include="Drawable.h" />
     <ClInclude Include="Gear.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Melee.h" />
@@ -167,6 +168,7 @@
     <ClCompile Include="Armor.cpp" />
     <ClCompile Include="CharacterManager.cpp" />
     <ClCompile Include="Die.cpp" />
+    <ClCompile Include="Drawable.cpp" />
     <ClCompile Include="Gear.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Melee.cpp" />

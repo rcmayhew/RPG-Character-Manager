@@ -13,9 +13,12 @@ public:
 	Ammo(double, int, std::string, std::string, int, RangedClass);
 	//number of uses are the amount of arrows left
 	virtual void use();
+	void add_ammo(std::shared_ptr<Ammo> lhs);
 	void add_ammo();
 	virtual ~Ammo();
+	virtual double total_weight();
 	RangedClass type();
 	Ammo& operator+=(std::shared_ptr<Ammo>);
+	virtual std::string print();
 };
 

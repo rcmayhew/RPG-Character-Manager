@@ -17,7 +17,7 @@ Melee::~Melee()
 
 Melee::Melee(Die die, DamageType dt, Size s,  WClass wc, int c, int cc, int att_bon,
 	int bon_dam, double w, int co, std::string n, std::string d, HandType mt) :
-	Weapon(die, dt, s, wc, c, cc, att_bon, 0, bon_dam, w, co, -1, n, d)
+	Weapon(die, dt, s, wc, c, cc, att_bon, 0, bon_dam, w, co, 1, n, d)
 {
 	meleetype = mt;
 }

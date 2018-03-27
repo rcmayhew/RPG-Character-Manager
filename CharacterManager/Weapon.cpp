@@ -10,6 +10,8 @@ Weapon::Weapon()
 }
 
 // is only used to be called by the inherited classes
+//uses for these are number of duplicates in inventory, and not uses left. 
+//these items should be able to be used unlimited number of times.
 Weapon::Weapon(Die die, DamageType dt, Size s, WClass wc, int c, int cc, int att_bon, int r, 
 	int bon_dam, double w, int co, int u, std::string n, std::string d) : 
 		Item(w,u,n,d,co)

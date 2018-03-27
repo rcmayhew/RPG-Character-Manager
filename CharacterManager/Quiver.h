@@ -1,15 +1,14 @@
 #pragma once
-#include "Stuff.h"
 #include "Ammo.h"
-//#include <algorithm>
-#include <unordered_map>
+#include "Stuff.h"
 #include <memory>
+#include <unordered_map>
 
 ///typedefs for easier readiblity
 typedef std::shared_ptr<Ammo> Element;
 //unordered_map that uses the Element name for the key
 typedef std::unordered_map<std::string, Element> Container;
-//vecotr of all ammor that can be used with current weapon
+//vecotr of all ammo that can be used with current weapon
 typedef std::vector <Element> Available;
 
 ///need to add a firmer interface for the caller
@@ -53,7 +52,12 @@ public:
 	//returns rangedtype for attack caller function
 	RangedClass type();
 
+	//prints out the current and all the other ammo in the quiver
 	std::string print();
+
+	//prints out the total weight of the quiver
+	double total_weight();
+
 	//starts out empty
 	Quiver();
 	virtual ~Quiver();
