@@ -19,6 +19,7 @@ class Drawable :
 	public Stuff
 {
 private:
+	//test git
 	//this caontains and manages all weapons and trask weapons that are drawn
 	//magic ativation will have its own caller
 	Container collection;
