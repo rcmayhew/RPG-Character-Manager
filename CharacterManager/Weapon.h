@@ -48,6 +48,11 @@ public:
 	virtual int damage(int str_mod);
 	//the main damage call and calls the other damage function
 	virtual int damage(bool critical, int str_mod);
+	//returns the weight times the qualtiy, giving the total weight
+	virtual double total_weight();
+
+	//adds a use to tehy item to signify that the quantiy has increased
+	void add_weapon();
 	
 	//the virtual function to call print and makes the class pure virtual
 	virtual std::string print() = 0;

@@ -74,3 +74,13 @@ std::string Weapon::print_crit()
 	printout += 'x' + std::to_string(crit);
 	return printout;
 }
+
+void Weapon::add_weapon()
+{
+	uses++;
+}
+
+double Weapon::total_weight()
+{
+	return uses * weight;
+}
