@@ -30,6 +30,39 @@ private:
 	Element off_hand_3 = nullptr;
 
 public:
+	//add weapon to the collection
+	void add_weapon(Element a);
+
+	//draws a into the main hand
+	Returns main_draw(Element a);
+	
+	//draws a into the first offhand hand
+	Returns off_draw1(Element a);
+	
+	//draws a into the second offhand hand
+	Returns off_draw2(Element a);
+	
+	//draws a into the third offhand hand
+	Returns off_draw3(Element a);
+
+	//check to see if an object is in the collection
+	bool found(Element);
+
+	//checks and removes item if it is in the collection
+	Returns remove_element(Element a);
+
+	//use weapon
+	int use_weapon_main();
+
+	//use weapon
+	Returns use_weapon_all();
+
+	//print out the current weapons that are housed in the collection and that are drawn
+	std::string print();
+
+	//gives the total weight of all items in the collection
+	virtual double total_weight();
+
 	Drawable();
 	virtual ~Drawable();
 };

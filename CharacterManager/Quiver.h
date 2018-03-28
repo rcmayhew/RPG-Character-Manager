@@ -34,6 +34,7 @@ public:
 	bool found(Element);
 	
 	//removes an elment by object
+	///needs to change return type to Returns
 	void remove_element(Element a);
 	
 	//removes an elment by stirng
