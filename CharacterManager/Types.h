@@ -88,7 +88,7 @@ enum class ArmorType
 	Heavy
 };
 
-enum class Slots
+enum Slots
 {
 	Head,
 	Headband,
@@ -104,6 +104,14 @@ enum class Slots
 	RRing,
 	LRing,
 	Feet
+};
+
+enum Hands
+{
+	Main,
+	Off,
+	Third,
+	Fourth
 };
 
 struct ArmorSpeed

@@ -7,6 +7,8 @@
 ///typedefs for easier readiblity
 //Element is for a weapon type and the interface class
 typedef std::shared_ptr<Weapon> Element;
+//contianer to hold the drawn weapons
+typedef std::vector<Element> Drawn;
 //unordered_map that uses the Element name for the key
 typedef std::unordered_map<std::string, Element> Container;
 //vecotr of all ammor that can be used with current weapon
@@ -23,17 +25,19 @@ private:
 	//this caontains and manages all weapons and trask weapons that are drawn
 	//magic ativation will have its own caller
 	Container collection;
-	Element main_hand = nullptr;
-	//most creatures only have 2 hands
-	Element off_hand_1 = nullptr;
-	//nobody has more than 4 hands
-	Element off_hand_2 = nullptr;
-	Element off_hand_3 = nullptr;
+	//this holds all weapons that are drawn
+	//if should never be larger than 4
+	//and shoudl only be accessed with Hands enum
+	Drawn drawn;
+	
 
 public:
 	//add weapon to the collection
 	void add_weapon(Element a);
 
+
+	Returns draw_weapons(enum Hands, Element);
+	/*
 	//draws a into the main hand
 	Returns main_draw(Element a);
 	
@@ -45,7 +49,7 @@ public:
 	
 	//draws a into the third offhand hand
 	Returns off_draw3(Element a);
-
+	*/
 	//check to see if an object is in the collection
 	bool found(Element);
 

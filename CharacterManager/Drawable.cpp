@@ -2,46 +2,6 @@
 #include "Drawable.h"
 
 
-Returns Drawable::main_draw(Element a)
-{
-	if (found(a))
-	{
-		main_hand = a;
-		return Returns::Exist;
-	}
-	return Returns::Error;
-}
-
-Returns Drawable::off_draw1(Element a)
-{
-	if (found(a))
-	{
-		off_hand_1 = a;
-		return Returns::Exist;
-	}
-	return Returns::Error;
-}
-
-Returns Drawable::off_draw2(Element a)
-{
-	if (found(a))
-	{
-		off_hand_2 = a;
-		return Returns::Exist;
-	}
-	return Returns::Error;
-}
-
-Returns Drawable::off_draw3(Element a)
-{
-	if (found(a))
-	{
-		off_hand_3 = a;
-		return Returns::Exist;
-	}
-	return Returns::Error;
-}
-
 bool Drawable::found(Element a)
 {
 	if (collection.find(a->print_name()) == collection.end()) return false;
@@ -60,13 +20,25 @@ double Drawable::total_weight()
 	return ret;
 }
 
+Returns Drawable::remove_element(Element a)
+{
+	if (found(a))
+	{
+		collection.erase(a->print_name());
+		return Returns::Used;
+	}
+	return Returns::Error;
+}
+
 int Drawable::use_weapon_main()
 {
-	
+	return 0;
 }
 
 Drawable::Drawable()
 {
+	//intializes the drawn vector as having 4 total possible slots
+	drawn = Drawn { nullptr, nullptr, nullptr, nullptr };
 }
 
 

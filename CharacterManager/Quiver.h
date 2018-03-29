@@ -44,7 +44,7 @@ public:
 	Returns use_ammo();
 	
 	//select specific ammo for use
-	Available & search_ammo(RangedClass);
+	Available search_ammo(RangedClass);
 
 	//should only select ammo that is in the collection
 	Returns select_ammo(Element);

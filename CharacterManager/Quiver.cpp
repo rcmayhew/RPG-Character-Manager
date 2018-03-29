@@ -6,7 +6,7 @@ Quiver::Quiver()
 {
 }
 
-Available & Quiver::search_ammo(RangedClass given_type)
+Available Quiver::search_ammo(RangedClass given_type)
 {
 	Available able;
 	//adds all ammo of a type so user can select the ammo/
