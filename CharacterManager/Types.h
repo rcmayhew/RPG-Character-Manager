@@ -88,7 +88,7 @@ enum class ArmorType
 	Heavy
 };
 
-enum Slots
+enum class Slots
 {
 	Head,
 	Headband,
@@ -106,7 +106,7 @@ enum Slots
 	Feet
 };
 
-enum Hands
+enum class Hands
 {
 	Main,
 	Off,
