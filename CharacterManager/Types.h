@@ -111,7 +111,8 @@ enum class Hands
 	Main,
 	Off,
 	Third,
-	Fourth
+	Fourth,
+	NOHAND
 };
 
 struct ArmorSpeed

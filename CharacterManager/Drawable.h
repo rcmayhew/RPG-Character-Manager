@@ -29,6 +29,12 @@ private:
 	//if should never be larger than 4
 	//and shoudl only be accessed with Hands enum
 	Drawn drawn;
+
+	//converts from class hands to size_t for its position in drawn
+	int hand_to_int(Hands);
+
+	//converts from int to hands
+	Hands int_to_hands(int);
 	
 
 public:
@@ -36,7 +42,7 @@ public:
 	void add_weapon(Element a);
 
 
-	Returns draw_weapons(enum Hands, Element);
+	Returns draw_weapons(Hands, Element);
 	/*
 	//draws a into the main hand
 	Returns main_draw(Element a);

@@ -45,3 +45,38 @@ Drawable::Drawable()
 Drawable::~Drawable()
 {
 }
+
+int hand_to_int(Hands hand)
+{
+	switch (hand)
+	{
+	case Hands::Main:
+		return 0;
+	case Hands::Off:
+		return 1;
+	case Hands::Third:
+		return 2;
+	case Hands::Fourth:
+		return 3;
+	default:
+		return -1;
+	}
+}
+
+Hands int_to_hands(int index)
+{
+	switch (index)
+	{
+	case 0:
+		return Hands::Main;
+	case 1:
+		return Hands::Off;
+	case 2:
+		return Hands::Third;
+	case 3:
+		return Hands::Fourth;
+	default:
+		perror("This index does not correspond with a hand");
+		return Hands::NOHAND;
+	}
+}
