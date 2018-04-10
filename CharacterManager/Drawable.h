@@ -35,34 +35,21 @@ private:
 
 	//converts from int to hands
 	Hands int_to_hands(int);
-	
 
+	//check to see if an object is in the collection
+	bool found(Element);
+	
 public:
 	//add weapon to the collection
 	void add_weapon(Element a);
 
-
 	Returns draw_weapons(Hands, Element);
-	/*
-	//draws a into the main hand
-	Returns main_draw(Element a);
-	
-	//draws a into the first offhand hand
-	Returns off_draw1(Element a);
-	
-	//draws a into the second offhand hand
-	Returns off_draw2(Element a);
-	
-	//draws a into the third offhand hand
-	Returns off_draw3(Element a);
-	*/
-	//check to see if an object is in the collection
-	bool found(Element);
 
 	//checks and removes item if it is in the collection
 	Returns remove_element(Element a);
 
 	//use weapon
+	//NEEDS TO BE FIXED AFTER THE ATTACK CALLER CLASS IS BUILT
 	int use_weapon_main();
 
 	//use weapon

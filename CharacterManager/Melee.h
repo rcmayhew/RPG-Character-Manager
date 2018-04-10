@@ -1,5 +1,6 @@
 #pragma once
 #include "Weapon.h"
+///handles all weapon weapons and is managed by the drawable class and called by the attack caller
 class Melee :
 	public Weapon
 {
@@ -10,6 +11,7 @@ public:
 	//default constructor, build a regular dagger
 	Melee();
 	//allows any melee weapon to be imputted into the system
+	//calls the weapon constructor
 	Melee(Die die, DamageType dt, Size s, WClass wc, int c,
 		int cc, int att_bon, int bon_dam, double w, int co, std::string n,
 		std::string d, HandType mt);

@@ -20,6 +20,9 @@ double Drawable::total_weight()
 	return ret;
 }
 
+//remove weapon from inventory
+//this would be called when weapon is dropped
+//but weapon shouldn't run out of uses
 Returns Drawable::remove_element(Element a)
 {
 	if (found(a))
@@ -30,6 +33,8 @@ Returns Drawable::remove_element(Element a)
 	return Returns::Error;
 }
 
+///FIX
+//still need to build the caller to finish
 int Drawable::use_weapon_main()
 {
 	return 0;
@@ -76,7 +81,6 @@ Hands int_to_hands(int index)
 	case 3:
 		return Hands::Fourth;
 	default:
-		perror("This index does not correspond with a hand");
 		return Hands::NOHAND;
 	}
 }

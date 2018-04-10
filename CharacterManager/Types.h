@@ -16,6 +16,7 @@ enum class Size
 	Colossal
 };
 
+//the differnet special that weapon can have
 enum class WSpecials
 {
 	None,
@@ -35,6 +36,7 @@ enum class WSpecials
 	Trip
 };
 
+//different classes of weapons, used to determine proficiency
 enum class WClass
 {
 	Simple,
@@ -42,6 +44,7 @@ enum class WClass
 	Exotic
 };
 
+//the size of a weapon, used for differnet feats and for two weapon fighting
 enum class HandType
 {
 	Unarmed,
@@ -50,6 +53,7 @@ enum class HandType
 	Twohanded
 };
 
+//damage type for the weapon, used for damage reduction
 enum class DamageType
 {
 	B,
@@ -57,6 +61,7 @@ enum class DamageType
 	S
 };
 
+//the different actions, will be used to limit turns
 enum class Actions
 {
 	Free,
@@ -67,6 +72,7 @@ enum class Actions
 	EntireRound
 };
 
+//the different type of ranged weapons, used to limit ammo
 enum class RangedClass
 {
 	ArrowTube,
@@ -80,6 +86,7 @@ enum class RangedClass
 	Thrown
 };
 
+//different types of armor, used for proficiency
 enum class ArmorType
 {
 	Shield,
@@ -88,6 +95,8 @@ enum class ArmorType
 	Heavy
 };
 
+//the different locations a person can equip gear, used to limit the number of items
+//and the link vector slot to their names
 enum class Slots
 {
 	Head,
@@ -106,6 +115,9 @@ enum class Slots
 	Feet
 };
 
+//location weapons can be equiped, used to limit weapons drawn
+//attack caller will need to check hands
+//because not all races will have more than 2 hands
 enum class Hands
 {
 	Main,
@@ -115,6 +127,9 @@ enum class Hands
 	NOHAND
 };
 
+//limits the speed of the user when it is worn
+//will need to add in special use cases
+//for when they don't apply
 struct ArmorSpeed
 {
 	int slow;
@@ -131,6 +146,8 @@ struct ArmorSpeed
 	}
 };
 
+//used for general return case
+//might be removed in the future
 enum class Returns
 {
 	Exist,

@@ -64,6 +64,7 @@ int Weapon::damage(int str_mod)
 	return base_damage.roll() + bonus_damage;
 }
 
+//prints out the crit in the classic format
 std::string Weapon::print_crit()
 {
 	std::string printout;
@@ -75,6 +76,7 @@ std::string Weapon::print_crit()
 	return printout;
 }
 
+//is called by its managing class whena duplicate item is used
 void Weapon::add_weapon()
 {
 	uses++;

@@ -1,10 +1,8 @@
 #pragma once
 #include "Item.h"
 #include <memory>
-
-
-
-//the base class for both ranged and melee weapons
+///base class to all items that are used to attack with unlimited uses
+///parent class to melee and ranged class
 class Weapon :
 	public Item
 {
