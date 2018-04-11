@@ -51,7 +51,7 @@ Drawable::~Drawable()
 {
 }
 
-int hand_to_int(Hands hand)
+int Drawable::hand_to_int(Hands hand)
 {
 	switch (hand)
 	{
@@ -68,7 +68,7 @@ int hand_to_int(Hands hand)
 	}
 }
 
-Hands int_to_hands(int index)
+Hands Drawable::int_to_hands(int index)
 {
 	switch (index)
 	{
@@ -82,5 +82,22 @@ Hands int_to_hands(int index)
 		return Hands::Fourth;
 	default:
 		return Hands::NOHAND;
+	}
+}
+
+Element Drawable::select(Element a)
+{
+	return collection.find(a->print_name)->second;
+}
+
+void Drawable::add_weapon(Element a)
+{
+	if (found(a))
+	{
+		select(a)->add_weapon();
+	}
+	else
+	{
+		collection.insert(a);
 	}
 }

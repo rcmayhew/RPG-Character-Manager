@@ -38,6 +38,9 @@ private:
 
 	//check to see if an object is in the collection
 	bool found(Element);
+
+	//if weapon exist in the collection, this selects the pointer in the container
+	Element select(Element);
 	
 public:
 	//add weapon to the collection
