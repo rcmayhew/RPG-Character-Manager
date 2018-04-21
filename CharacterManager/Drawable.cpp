@@ -87,7 +87,7 @@ Hands Drawable::int_to_hands(int index)
 
 Element Drawable::select(Element a)
 {
-	return collection.find(a->print_name)->second;
+	return collection.find(a->print_name())->second;
 }
 
 void Drawable::add_weapon(Element a)
@@ -98,6 +98,6 @@ void Drawable::add_weapon(Element a)
 	}
 	else
 	{
-		collection.insert(a);
+		//collection.insert(a);
 	}
 }

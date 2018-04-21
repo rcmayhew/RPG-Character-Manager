@@ -21,13 +21,12 @@ class Drawable :
 	public Stuff
 {
 private:
-	//test git
 	//this caontains and manages all weapons and trask weapons that are drawn
 	//magic ativation will have its own caller
 	Container collection;
 	//this holds all weapons that are drawn
-	//if should never be larger than 4
-	//and shoudl only be accessed with Hands enum
+	//it should never be larger than 4
+	//and should only be accessed with Hands enum
 	Drawn drawn;
 
 	//converts from class hands to size_t for its position in drawn

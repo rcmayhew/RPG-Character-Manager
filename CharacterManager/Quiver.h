@@ -57,7 +57,7 @@ public:
 	std::string print();
 
 	//prints out the total weight of the quiver
-	double total_weight();
+	virtual double total_weight();
 
 	//starts out empty
 	Quiver();

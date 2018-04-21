@@ -3,10 +3,9 @@
 
 //leather armor
 Armor::Armor() : Wearable(15.0, -1, "leather", "Leather armor is made up of pieces"
-	" of hard boiled leather carefully sewn together.", 10)
+	" of hard boiled leather carefully sewn together.", 10, Slots::Armor)
 {
 	armor_type = ArmorType::Light;
-	slots = Slots::Armor;
 	AC_bonus = 2;
 	max_dex = 6;
 	armor_check = 0;
@@ -15,10 +14,9 @@ Armor::Armor() : Wearable(15.0, -1, "leather", "Leather armor is made up of piec
 
 Armor::Armor(double weight, int uses, std::string name, std::string description,
 	int cost, ArmorType armort, Slots slot, int ACb, int maxd, int armorc,
-	int spellf, ArmorSpeed armors) : Wearable(weight, uses, name, description, cost)
+	int spellf, ArmorSpeed armors) : Wearable(weight, uses, name, description, cost, slot)
 {
 	armor_type = armort;
-	slots = slot;
 	AC_bonus = ACb;
 	max_dex = maxd;
 	armor_check = armorc;
@@ -26,6 +24,10 @@ Armor::Armor(double weight, int uses, std::string name, std::string description,
 	armor_speed = armors;
 }
 
+void Armor::use()
+{
+	return;
+}
 
 Armor::~Armor()
 {
