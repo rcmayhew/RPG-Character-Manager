@@ -1,8 +1,8 @@
 #pragma once
-#include "Wearable.h"
+#include "Gear.h"
 ///this is for all wearable items that give armor class (shields and armor)
 class Armor :
-	public Wearable
+	public Gear
 {
 protected:
 	ArmorType armor_type;
@@ -16,7 +16,7 @@ public:
 	
 	//main constructor, calls the wearable constructor
 	Armor(double weight, int uses, std::string name, std::string description,
-		int cost, ArmorType armort, Slots slot, int ACb, int maxd, int armorc,
+		int cost, ArmorType armort, int ACb, int maxd, int armorc,
 		int spellf, ArmorSpeed armors);
 	
 	//prints out a description of the item

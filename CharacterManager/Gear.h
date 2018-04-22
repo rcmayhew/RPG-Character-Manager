@@ -5,6 +5,7 @@ class Gear :
 	public Wearable
 {
 protected:
+	Slots slot;
 	//magical effect
 public:
 	Gear();

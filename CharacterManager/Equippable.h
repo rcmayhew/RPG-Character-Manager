@@ -1,6 +1,6 @@
 #pragma once
 #include "Stuff.h"
-#include "Wearable.h"
+#include "Armor.h"
 #include <memory>
 #include <unordered_map>
 

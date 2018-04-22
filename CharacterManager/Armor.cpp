@@ -2,7 +2,7 @@
 #include "Armor.h"
 
 //leather armor
-Armor::Armor() : Wearable(15.0, -1, "leather", "Leather armor is made up of pieces"
+Armor::Armor() : Gear(15.0, -1, "leather", "Leather armor is made up of pieces"
 	" of hard boiled leather carefully sewn together.", 10, Slots::Armor)
 {
 	armor_type = ArmorType::Light;
@@ -13,8 +13,9 @@ Armor::Armor() : Wearable(15.0, -1, "leather", "Leather armor is made up of piec
 }
 
 Armor::Armor(double weight, int uses, std::string name, std::string description,
-	int cost, ArmorType armort, Slots slot, int ACb, int maxd, int armorc,
-	int spellf, ArmorSpeed armors) : Wearable(weight, uses, name, description, cost, slot)
+	int cost, ArmorType armort, int ACb, int maxd, int armorc,
+	int spellf, ArmorSpeed armors) : Gear(weight, uses, name, description, cost,
+	Slots::Armor)
 {
 	armor_type = armort;
 	AC_bonus = ACb;
