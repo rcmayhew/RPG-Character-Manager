@@ -1,6 +1,5 @@
 #pragma once
 #include "Ammo.h"
-#include "Stuff.h"
 #include <memory>
 #include <unordered_map>
 

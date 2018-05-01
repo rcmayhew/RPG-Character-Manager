@@ -1,5 +1,4 @@
 #pragma once
-#include "Stuff.h"
 #include "Weapon.h"
 #include <memory>
 #include <unordered_map>

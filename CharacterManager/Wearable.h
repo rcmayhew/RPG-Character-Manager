@@ -6,6 +6,8 @@
 class Wearable :
 	public Item
 {
+private:
+	Slots slot;
 public:
 	Wearable();
 	//main constructor, is called by the gear and armor class

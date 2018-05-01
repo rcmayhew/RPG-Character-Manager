@@ -1,5 +1,4 @@
 #pragma once
-#include "Stuff.h"
 #include "Armor.h"
 #include <memory>
 #include <unordered_map>
@@ -20,6 +19,13 @@ private:
 	Container container;
 	//the collection that holds the currently equipped gear
 	Worn worn;
+	//transfer number to slot
+	Slots int_to_slot(int);
+	//transfer slot to index of the vector
+	int slots_to_int(Slots);
+	//find element in the collection
+	bool found(Element a);
+
 public:
 	Equippable();
 	~Equippable();
