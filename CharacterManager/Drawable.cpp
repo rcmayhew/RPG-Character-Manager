@@ -90,6 +90,7 @@ Element Drawable::select(Element a)
 	return collection.find(a->print_name())->second;
 }
 
+//fix
 void Drawable::add_weapon(Element a)
 {
 	if (found(a))

@@ -112,7 +112,8 @@ enum class Slots
 	Hands,
 	RRing,
 	LRing,
-	Feet
+	Feet,
+	NOSLOT
 };
 
 //location weapons can be equiped, used to limit weapons drawn

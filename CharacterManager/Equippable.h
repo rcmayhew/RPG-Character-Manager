@@ -27,6 +27,10 @@ private:
 	bool found(Element a);
 
 public:
+	// adds armor to the inventory
+	void add_armor(Element armor);
+	//equips armor
+	void equips_armor(Element armor);
 	Equippable();
 	~Equippable();
 };
