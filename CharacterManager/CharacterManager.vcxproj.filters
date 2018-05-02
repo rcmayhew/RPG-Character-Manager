@@ -63,6 +63,12 @@
     <ClInclude Include="Equippable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Multi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Usable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -108,6 +114,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Equippable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Multi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Usable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

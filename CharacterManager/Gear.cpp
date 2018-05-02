@@ -10,8 +10,8 @@ Gear::Gear() : Wearable(1, -1, "Mask", "Gala events are where one may see the "
 {
 }
 
-Gear::Gear(double weight, int uses, std::string name, std::string description,
-	int cost, Slots slots) : Wearable(weight, uses, name, description, cost, slots)
+Gear::Gear(double weight, int quantity, std::string name, std::string description,
+	int cost, Slots slots) : Wearable(weight, quantity, name, description, cost, slots)
 {
 }
 

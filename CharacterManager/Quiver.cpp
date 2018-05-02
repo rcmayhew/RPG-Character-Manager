@@ -9,7 +9,7 @@ Quiver::Quiver()
 Available Quiver::search_ammo(RangedClass given_type)
 {
 	Available able;
-	//adds all ammo of a type so user can select the ammo/
+	// adds all ammo of a type so user can select the ammo/
 	for (auto it : collection)
 	{
 		if (it.second->type() == given_type)
@@ -25,14 +25,14 @@ void Quiver::add_ammo(Element a)
 	
 	if (found(a))
 	{
-		//if the selected ammo is of the same name
-		//then it add uses(ammor amount) to the item
+		// if the selected ammo is of the same name
+		// then it add uses(ammor amount) to the item
 		collection.at(a->print_name())->add_ammo(a);
 	}
 	else
 	{
-		//adds the item to the collection if
-		//not found already in the collection
+		// adds the item to the collection if
+		// not found already in the collection
 		collection.emplace(a->print_name(), a);
 		if (!current) current = a;
 	}
@@ -40,12 +40,12 @@ void Quiver::add_ammo(Element a)
 
 Returns Quiver::use_ammo()
 {
-	//assumes that the current ammo is the wanted ammo 
-	//and works for the choosen ranged weapon
-	int uses_left = current->uses_left();
+	// assumes that the current ammo is the wanted ammo 
+	// and works for the choosen ranged weapon
+	int quantity_left = current->quantity_left();
 	current->use();
-	//deletes ammo that is used up
-	if (uses_left == 1)
+	// deletes ammo that is used up
+	if (quantity_left == 1)
 	{
 		collection.erase(current->print_name());
 		current = collection.begin()->second;
@@ -106,7 +106,7 @@ std::string Quiver::print()
 	for (auto it : collection)
 	{
 		if (it.first == current->print_name()) continue;
-		printout += '\n' + it.second->print_name() + '\t' + std::to_string(it.second->uses_left());
+		printout += '\n' + it.second->print_name() + '\t' + std::to_string(it.second->quantity_left());
 	}
 	return printout;
 }

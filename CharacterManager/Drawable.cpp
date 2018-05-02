@@ -10,19 +10,19 @@ bool Drawable::found(Element a)
 
 double Drawable::total_weight()
 {
-	//to total weight to be returned
+	// to total weight to be returned
 	double ret = 0;
 	for (auto it : collection)
 	{
-		//the total weight being called on the weapon itself handles duplicates
+		// the total weight being called on the weapon itself handles duplicates
 		ret += it.second->total_weight();
 	}
 	return ret;
 }
 
-//remove weapon from inventory
-//this would be called when weapon is dropped
-//but weapon shouldn't run out of uses
+// remove weapon from inventory
+// this would be called when weapon is dropped
+// but weapon shouldn't run out of uses
 Returns Drawable::remove_element(Element a)
 {
 	if (found(a))
@@ -33,8 +33,8 @@ Returns Drawable::remove_element(Element a)
 	return Returns::Error;
 }
 
-///FIX
-//still need to build the caller to finish
+// /FIX
+// still need to build the caller to finish
 int Drawable::use_weapon_main()
 {
 	return 0;
@@ -42,7 +42,7 @@ int Drawable::use_weapon_main()
 
 Drawable::Drawable()
 {
-	//intializes the drawn vector as having 4 total possible slots
+	// intializes the drawn vector as having 4 total possible slots
 	drawn = Drawn { nullptr, nullptr, nullptr, nullptr };
 }
 
@@ -85,20 +85,20 @@ Hands Drawable::int_to_hands(int index)
 	}
 }
 
-Element Drawable::select(Element a)
+Element Drawable::select(std::string weapon_name)
 {
-	return collection.find(a->print_name())->second;
+	return collection.find(weapon_name)->second;
 }
 
-//fix
-void Drawable::add_weapon(Element a)
+// fix
+void Drawable::add_weapon(Element weapon)
 {
-	if (found(a))
+	if (found(weapon))
 	{
-		select(a)->add_weapon();
+		select(weapon->print_name())->add_weapon();
 	}
 	else
 	{
-		//collection.insert(a);
+		collection.insert({ weapon->print_name(), weapon });
 	}
 }

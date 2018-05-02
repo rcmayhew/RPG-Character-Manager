@@ -15,18 +15,18 @@ Ammo::Ammo() : Item(0.15, 1, "arrow, common", "Regular arrow used in bows", 1)
 
 void Ammo::use()
 {
-	uses--;
+	quantity--;
 }
 
 void Ammo::add_ammo()
 {
-	uses++;
+	quantity++;
 }
 
 
 double Ammo::total_weight()
 {
-	return uses * weight;
+	return quantity * weight;
 }
 
 Ammo::~Ammo()
@@ -35,12 +35,12 @@ Ammo::~Ammo()
 
 void Ammo::add_ammo(std::shared_ptr<Ammo> lhs)
 {
-	this->uses += lhs->uses;
+	this->quantity += lhs->quantity;
 }
 
 Ammo& Ammo::operator+=(std::shared_ptr<Ammo> lhs)
 {
-	this->uses += lhs->uses;
+	this->quantity += lhs->quantity;
 	return *this;
 }
 
@@ -54,7 +54,7 @@ std::string Ammo::print()
 	std::string printout;
 	printout = name + '\t'
 		+ std::to_string(weight) + " lbs \t"
-		+ "Ammo left: " + std::to_string(uses) + '\n'
+		+ "Ammo left: " + std::to_string(quantity) + '\n'
 		+ description;
 	return printout;
 }

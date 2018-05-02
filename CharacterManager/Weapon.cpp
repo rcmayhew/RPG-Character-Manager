@@ -10,11 +10,11 @@ Weapon::Weapon()
 }
 
 // is only used to be called by the inherited classes
-//uses for these are number of duplicates in inventory, and not uses left. 
-//these items should be able to be used unlimited number of times.
+// quantity for these are number of duplicates in inventory, and not uses left. 
+// these items should be able to be used unlimited number of times.
 Weapon::Weapon(Die die, DamageType dt, Size s, WClass wc, int c, int cc, int att_bon, int r, 
-	int bon_dam, double w, int co, int u, std::string n, std::string d) : 
-		Item(w,u,n,d,co)
+	int bon_dam, double w, int co, int q, std::string n, std::string d) : 
+		Item(w, q, n, d, co)
 {
 	base_damage = die;
 	attack_bonus = att_bon;
@@ -32,14 +32,14 @@ Weapon::~Weapon()
 }
 
 
-//function that rolls the die for the attack
+// function that rolls the die for the attack
 int Weapon::attack()
 {
 	std::shared_ptr<Die> attack_die = std::make_shared <Die>(1, 20);
 	return attack_die->roll();
 }
 
-//checks crit and returns total attack
+// checks crit and returns total attack
 int Weapon::attack(bool & critical)
 {
 	int base = this->attack();
@@ -47,7 +47,7 @@ int Weapon::attack(bool & critical)
 	return base + attack_bonus;
 }
 
-//main damage call
+// main damage call
 int Weapon::damage(bool critical, int str_mod)
 {
 	int total = 0;
@@ -58,13 +58,13 @@ int Weapon::damage(bool critical, int str_mod)
 	return total;
 }
 
-//interior damage function
+// interior damage function
 int Weapon::damage(int str_mod)
 {
 	return base_damage.roll() + bonus_damage;
 }
 
-//prints out the crit in the classic format
+// prints out the crit in the classic format
 std::string Weapon::print_crit()
 {
 	std::string printout;
@@ -76,13 +76,13 @@ std::string Weapon::print_crit()
 	return printout;
 }
 
-//is called by its managing class whena duplicate item is used
+// is called by its managing class whena duplicate item is used
 void Weapon::add_weapon()
 {
-	uses++;
+	quantity++;
 }
 
 double Weapon::total_weight()
 {
-	return uses * weight;
+	return quantity * weight;
 }

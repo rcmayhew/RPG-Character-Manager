@@ -6,12 +6,12 @@ class Ammo :
 {
 protected:
 	RangedClass ranged_class;
-	//speeds up reload
-	//extra damage
+	// speeds up reload
+	// extra damage
 public:
 	Ammo();
 	Ammo(double, int, std::string, std::string, int, RangedClass);
-	//number of uses are the amount of arrows left
+	// number of quantity are the amount of arrows left
 	virtual void use();
 	void add_ammo(std::shared_ptr<Ammo> lhs);
 	void add_ammo();

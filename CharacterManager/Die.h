@@ -1,25 +1,25 @@
 #pragma once
 #include <string>
-//This class is for rolling multiple of the same die. If there are more than
-//one die size, there will need to be more than one class of die.
+// This class is for rolling multiple of the same die. If there are more than
+// one die size, there will need to be more than one class of die.
 class Die
 {
 private:
-	//the amount of dice to be rolled
+	// the amount of dice to be rolled
 	int num_of_dice;
-	//the number of sides on the die
+	// the number of sides on the die
 	int size_of_dice;
-	//rolls the dice each time
+	// rolls the dice each time
 	int roll_single();
 public:
-	//constructor will default to 1d20 or a 20 sided die
+	// constructor will default to 1d20 or a 20 sided die
 	Die();
-	//first parameter is the number of dice, the second is the size
+	// first parameter is the number of dice, the second is the size
 	Die(int, int);
 	~Die();
-	//totals the dice that were rolled
+	// totals the dice that were rolled
 	int roll();
-	//allows printing of dice
+	// allows printing of dice
 	std::string to_string();
 };
 

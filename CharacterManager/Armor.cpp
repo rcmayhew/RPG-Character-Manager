@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Armor.h"
 
-//leather armor
+// leather armor
 Armor::Armor() : Gear(15.0, -1, "leather", "Leather armor is made up of pieces"
 	" of hard boiled leather carefully sewn together.", 10, Slots::Armor)
 {
@@ -12,9 +12,9 @@ Armor::Armor() : Gear(15.0, -1, "leather", "Leather armor is made up of pieces"
 	spell_fail = 10;
 }
 
-Armor::Armor(double weight, int uses, std::string name, std::string description,
+Armor::Armor(double weight, int quantity, std::string name, std::string description,
 	int cost, ArmorType armort, int ACb, int maxd, int armorc,
-	int spellf, ArmorSpeed armors) : Gear(weight, uses, name, description, cost,
+	int spellf, ArmorSpeed armors) : Gear(weight, quantity, name, description, cost,
 	Slots::Armor)
 {
 	armor_type = armort;

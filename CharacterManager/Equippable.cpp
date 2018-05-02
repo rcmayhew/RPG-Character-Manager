@@ -85,14 +85,22 @@ bool Equippable::found(Element armor) {
 	return true;
 }
 
-//fix
+Element Equippable::select(std::string armor_name)
+{
+	return container.find(armor_name)->second;
+}
+
+// fix
 void Equippable::add_armor(Element armor)
 {
 	if (found(armor))
 	{
-		//select(a)->add
+		select(armor->print_name())->add_armor();
 	}
-
+	else
+	{
+		container.insert({ armor->print_name(), armor });
+	}
 }
 
 Equippable::~Equippable()
