@@ -20,6 +20,8 @@ protected:
 	// Condition magic
 	// magic is going to be emplemted after the general framework is laid out.
 public:
+	//added one to the quantity of the item
+	void add_item();
 	// constructor used by all inherited classes
 	Item(double weight, int quantity, std::string name, std::string description, int cost);
 	// creates an undeclared item

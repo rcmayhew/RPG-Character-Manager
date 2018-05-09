@@ -15,7 +15,9 @@ class Usable :
 {
 private:
 	Backpack backpack;
+	bool found(Element a);
 public:
+	void add_item(Element a);
 	Usable();
 	virtual ~Usable();
 };

@@ -21,6 +21,10 @@ Item::Item()
 	description = "Undeclared item";
 }
 
+void Item::add_item()
+{
+	++quantity;
+}
 
 Item::~Item()
 {
