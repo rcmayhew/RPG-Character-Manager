@@ -27,3 +27,13 @@ Usable::Usable()
 Usable::~Usable()
 {
 }
+
+double Usable::total_weight()
+{
+	double ret = 0;
+	for (auto it : backpack)
+	{
+		ret += it.second->total_weight();
+	}
+	return ret;
+}

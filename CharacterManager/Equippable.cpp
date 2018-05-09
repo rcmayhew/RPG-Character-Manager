@@ -106,3 +106,13 @@ void Equippable::add_armor(Element armor)
 Equippable::~Equippable()
 {
 }
+
+double Equippable::total_weight()
+{
+	double ret = 0;
+	for (auto it : container)
+	{
+		ret += it.second->total_weight();
+	}
+	return ret;
+}

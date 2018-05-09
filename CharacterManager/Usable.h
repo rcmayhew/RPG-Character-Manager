@@ -17,6 +17,7 @@ private:
 	Backpack backpack;
 	bool found(Element a);
 public:
+	double total_weight();
 	void add_item(Element a);
 	Usable();
 	virtual ~Usable();

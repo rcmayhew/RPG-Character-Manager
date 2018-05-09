@@ -153,6 +153,7 @@
     <ClInclude Include="Drawable.h" />
     <ClInclude Include="Equippable.h" />
     <ClInclude Include="Gear.h" />
+    <ClInclude Include="Inventory.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Melee.h" />
     <ClInclude Include="Multi.h" />
@@ -174,6 +175,7 @@
     <ClCompile Include="Drawable.cpp" />
     <ClCompile Include="Equippable.cpp" />
     <ClCompile Include="Gear.cpp" />
+    <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Melee.cpp" />
     <ClCompile Include="Multi.cpp" />

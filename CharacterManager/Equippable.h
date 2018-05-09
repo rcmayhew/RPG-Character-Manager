@@ -29,6 +29,8 @@ private:
 	Element select(std::string);
 
 public:
+	//
+	double total_weight();
 	//  adds armor to the inventory
 	void add_armor(Element armor);
 	// equips armor
