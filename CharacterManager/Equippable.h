@@ -5,36 +5,36 @@
 
 // /typedefs for easier readiblity
 // Element is for a weapon type and the interface class
-typedef std::shared_ptr<Wearable> Element;
+typedef std::shared_ptr<Wearable> Gears;
 // contianer to hold the drawn weapons
-typedef std::vector<Element> Worn;
+typedef std::vector<Gears> Worn;
 // unordered_map that uses the Element name for the key
-typedef std::unordered_map<std::string, Element> Container;
+typedef std::unordered_map<std::string, Gears> GearBag;
 
 class Equippable :
 	public Stuff
 {
 private:
 	// holds all the items that can be worn
-	Container container;
+	GearBag gear_bag;
 	// the collection that holds the currently equipped gear
 	Worn worn;
 	// transfer number to slot
 	Slots int_to_slot(int);
 	// transfer slot to index of the vector
 	int slots_to_int(Slots);
-	// find element in the collection
-	bool found(Element a);
+	// find Gears in the collection
+	bool found(Gears a);
 	// selects the pointer to an object of the same name
-	Element select(std::string);
+	Gears select(std::string);
 
 public:
 	//
 	double total_weight();
 	//  adds armor to the inventory
-	void add_armor(Element armor);
+	void add_armor(Gears armor);
 	// equips armor
-	void equips_armor(Element armor);
+	void equips_armor(Gears armor);
 	Equippable();
 	~Equippable();
 };

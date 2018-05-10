@@ -6,19 +6,19 @@
 
 // /typedefs for easier readiblity
 // Element is for a weapon type and the interface class
-typedef std::shared_ptr<Item> Element;
+typedef std::shared_ptr<Item> Items;
 // unordered_map that uses the Element name for the key
-typedef std::unordered_map<std::string, Element> Backpack;
+typedef std::unordered_map<std::string, Items> Backpack;
 
 class Usable :
 	public Stuff
 {
 private:
 	Backpack backpack;
-	bool found(Element a);
+	bool found(Items a);
 public:
 	double total_weight();
-	void add_item(Element a);
+	void add_item(Items a);
 	Usable();
 	virtual ~Usable();
 };

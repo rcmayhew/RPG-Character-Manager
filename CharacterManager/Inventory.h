@@ -13,8 +13,13 @@ private:
 	Usable usable;
 	Quiver quiver;
 public:
-	void add_item();
+	// needs to handle everytime of item
+	void add_item(Weapons);
+	void add_item(Gears);
+	void add_item(Items);
+	void add_item(Ammos);
 	double total_weight();
+	std::string print();
 	Inventory();
 	~Inventory();
 };

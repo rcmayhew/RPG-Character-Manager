@@ -2,7 +2,7 @@
 #include "Item.h"
 // this is for all items that have mulitple uses per item
 // assumes that you use item linearly
-// and has no support for mulitple partially used items
+// and has no support for mulitple partially used itemsnice 
 class Multi :
 	public Item
 {

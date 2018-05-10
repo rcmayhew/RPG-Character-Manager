@@ -2,9 +2,9 @@
 #include "Drawable.h"
 
 
-bool Drawable::found(Element a)
+bool Drawable::found(Weapons a)
 {
-	if (collection.find(a->print_name()) == collection.end()) return false;
+	if (sheath.find(a->print_name()) == sheath.end()) return false;
 	return true;
 }
 
@@ -12,7 +12,7 @@ double Drawable::total_weight()
 {
 	// to total weight to be returned
 	double ret = 0;
-	for (auto it : collection)
+	for (auto it : sheath)
 	{
 		// the total weight being called on the weapon itself handles duplicates
 		ret += it.second->total_weight();
@@ -23,11 +23,11 @@ double Drawable::total_weight()
 // remove weapon from inventory
 // this would be called when weapon is dropped
 // but weapon shouldn't run out of uses
-Returns Drawable::remove_element(Element a)
+Returns Drawable::remove_weapon(Weapons a)
 {
 	if (found(a))
 	{
-		collection.erase(a->print_name());
+		sheath.erase(a->print_name());
 		return Returns::Used;
 	}
 	return Returns::Error;
@@ -85,13 +85,13 @@ Hands Drawable::int_to_hands(int index)
 	}
 }
 
-Element Drawable::select(std::string weapon_name)
+Weapons Drawable::select(std::string weapon_name)
 {
-	return collection.find(weapon_name)->second;
+	return sheath.find(weapon_name)->second;
 }
 
-// fix
-void Drawable::add_weapon(Element weapon)
+
+void Drawable::add_weapon(Weapons weapon)
 {
 	if (found(weapon))
 	{
@@ -99,6 +99,6 @@ void Drawable::add_weapon(Element weapon)
 	}
 	else
 	{
-		collection.insert({ weapon->print_name(), weapon });
+		sheath.insert({ weapon->print_name(), weapon });
 	}
 }

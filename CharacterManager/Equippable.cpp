@@ -80,18 +80,18 @@ Slots Equippable::int_to_slot(int index)
 	}
 }
 
-bool Equippable::found(Element armor) {
-	if (container.find(armor->print_name()) == container.end()) return false;
+bool Equippable::found(Gears armor) {
+	if (gear_bag.find(armor->print_name()) == gear_bag.end()) return false;
 	return true;
 }
 
-Element Equippable::select(std::string armor_name)
+Gears Equippable::select(std::string armor_name)
 {
-	return container.find(armor_name)->second;
+	return gear_bag.find(armor_name)->second;
 }
 
 // fix
-void Equippable::add_armor(Element armor)
+void Equippable::add_armor(Gears armor)
 {
 	if (found(armor))
 	{
@@ -99,7 +99,7 @@ void Equippable::add_armor(Element armor)
 	}
 	else
 	{
-		container.insert({ armor->print_name(), armor });
+		gear_bag.insert({ armor->print_name(), armor });
 	}
 }
 
@@ -110,7 +110,7 @@ Equippable::~Equippable()
 double Equippable::total_weight()
 {
 	double ret = 0;
-	for (auto it : container)
+	for (auto it : gear_bag)
 	{
 		ret += it.second->total_weight();
 	}

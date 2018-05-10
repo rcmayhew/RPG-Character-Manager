@@ -10,7 +10,7 @@ Available Quiver::search_ammo(RangedClass given_type)
 {
 	Available able;
 	// adds all ammo of a type so user can select the ammo/
-	for (auto it : collection)
+	for (auto it : arrow_holder)
 	{
 		if (it.second->type() == given_type)
 		{
@@ -20,20 +20,20 @@ Available Quiver::search_ammo(RangedClass given_type)
 	return able;
 }
 
-void Quiver::add_ammo(Element a)
+void Quiver::add_ammo(Ammos a)
 {
 	
 	if (found(a))
 	{
 		// if the selected ammo is of the same name
 		// then it add uses(ammor amount) to the item
-		collection.at(a->print_name())->add_ammo(a);
+		arrow_holder.at(a->print_name())->add_ammo(a);
 	}
 	else
 	{
-		// adds the item to the collection if
-		// not found already in the collection
-		collection.emplace(a->print_name(), a);
+		// adds the item to the arrow_holder if
+		// not found already in the arrow_holder
+		arrow_holder.emplace(a->print_name(), a);
 		if (!current) current = a;
 	}
 }
@@ -47,8 +47,8 @@ Returns Quiver::use_ammo()
 	// deletes ammo that is used up
 	if (quantity_left == 1)
 	{
-		collection.erase(current->print_name());
-		current = collection.begin()->second;
+		arrow_holder.erase(current->print_name());
+		current = arrow_holder.begin()->second;
 		return Returns::Used;
 	}
 	return Returns::Exist;
@@ -56,7 +56,7 @@ Returns Quiver::use_ammo()
 	
 }
 
-Returns Quiver::select_ammo(Element a)
+Returns Quiver::select_ammo(Ammos a)
 {
 	if (found(a))
 	{
@@ -67,19 +67,19 @@ Returns Quiver::select_ammo(Element a)
 	
 }
 
-void Quiver::remove_element(Element a)
+void Quiver::remove_ammo(Ammos a)
 {
-	collection.erase(a->print_name());
+	arrow_holder.erase(a->print_name());
 }
 
-void Quiver::remove_element(std::string name)
+void Quiver::remove_ammo(std::string name)
 {
-	collection.erase(name);
+	arrow_holder.erase(name);
 }
 
-bool Quiver::found(Element a)
+bool Quiver::found(Ammos a)
 {
-	if (collection.find(a->print_name()) == collection.end()) return false;
+	if (arrow_holder.find(a->print_name()) == arrow_holder.end()) return false;
 	return true;
 }
 
@@ -97,13 +97,13 @@ std::string Quiver::print()
 		+ current->print() + '\n';
 
 	
-	if (collection.size() < 2)
+	if (arrow_holder.size() < 2)
 	{
-		printout += " \nNo other ammo in quiver.";
+		printout += "No other ammo in quiver.";
 		return printout;
 	}
-	printout += line + "\nOther ammo in quiver:";
-	for (auto it : collection)
+	printout += line + "Other ammo in quiver:";
+	for (auto it : arrow_holder)
 	{
 		if (it.first == current->print_name()) continue;
 		printout += '\n' + it.second->print_name() + '\t' + std::to_string(it.second->quantity_left());
@@ -114,7 +114,7 @@ std::string Quiver::print()
 double Quiver::total_weight()
 {
 	double ret = 0;
-	for (auto it : collection)
+	for (auto it : arrow_holder)
 	{
 		ret += it.second->total_weight();
 	}

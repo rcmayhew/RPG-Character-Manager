@@ -1,13 +1,13 @@
 #include "stdafx.h"
 #include "Usable.h"
 
-bool Usable::found(Element a)
+bool Usable::found(Items a)
 {
 	if (backpack.find(a->print_name()) == backpack.end()) return false;
 	return true;
 }
 
-void Usable::add_item(Element item)
+void Usable::add_item(Items item)
 {
 	if (found(item))
 	{

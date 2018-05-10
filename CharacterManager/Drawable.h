@@ -4,14 +4,12 @@
 #include <unordered_map>
 
 // /typedefs for easier readiblity
-// Element is for a weapon type and the interface class
-typedef std::shared_ptr<Weapon> Element;
+// Weapons is for a weapon type and the interface class
+typedef std::shared_ptr<Weapon> Weapons;
 // contianer to hold the drawn weapons
-typedef std::vector<Element> Drawn;
+typedef std::vector<Weapons> Drawn;
 // unordered_map that uses the Element name for the key
-typedef std::unordered_map<std::string, Element> Container;
-// vecotr of all ammor that can be used with current weapon
-typedef std::vector <Element> Available;
+typedef std::unordered_map<std::string, Weapons> Sheaths;
 
 // This is the class to manager and hold all items that are weapons. 
 // Even though the class name is drawable, this class does not handle 
@@ -22,7 +20,7 @@ class Drawable :
 private:
 	// this caontains and manages all weapons and trask weapons that are drawn
 	// magic ativation will have its own caller
-	Container collection;
+	Sheaths sheath;
 	// this holds all weapons that are drawn
 	// it should never be larger than 4
 	// and should only be accessed with Hands enum
@@ -34,20 +32,20 @@ private:
 	// converts from int to hands
 	Hands int_to_hands(int);
 
-	// check to see if an object is in the collection
-	bool found(Element);
+	// check to see if an object is in the sheath
+	bool found(Weapons);
 
-	// if weapon exist in the collection, this selects the pointer in the container
-	Element select(std::string);
+	// if weapon exist in the sheath, this selects the pointer in the Sheaths
+	Weapons select(std::string);
 	
 public:
-	// add weapon to the collection
-	void add_weapon(Element a);
+	// add weapon to the sheath
+	void add_weapon(Weapons a);
 
-	Returns draw_weapons(Hands, Element);
+	Returns draw_weapons(Hands, Weapons);
 
-	// checks and removes item if it is in the collection
-	Returns remove_element(Element a);
+	// checks and removes item if it is in the sheath
+	Returns remove_weapon(Weapons a);
 
 	// use weapon
 	// NEEDS TO BE FIXED AFTER THE ATTACK CALLER CLASS IS BUILT
