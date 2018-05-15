@@ -32,3 +32,8 @@ std::string Gear::print()
 		+ description;
 	return printout;
 }
+
+Slots Gear::give_slot()
+{
+	return slot;
+}

@@ -19,6 +19,16 @@ void Usable::add_item(Items item)
 	}
 }
 
+std::string Usable::print()
+{
+	std::string printout;
+	for (auto it : backpack)
+	{
+		printout += it.second->print_name() + '\t' + std::to_string(it.second->quantity_left()) + '\n';
+	}
+	return printout;
+}
+
 Usable::Usable()
 {
 }

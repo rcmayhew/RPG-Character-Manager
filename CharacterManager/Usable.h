@@ -14,11 +14,22 @@ class Usable :
 	public Stuff
 {
 private:
+	// holds the items
 	Backpack backpack;
-	bool found(Items a);
 public:
+	// returns true if the object is in the back pack
+	bool found(Items a);
+	
+	// gives a print out of all objects in the backpack
+	std::string print();
+	
+	// returns the total weight of all objects in the backpack
 	double total_weight();
+	
+	// add an item to the backpack
 	void add_item(Items a);
+	
+	// default constructor
 	Usable();
 	virtual ~Usable();
 };

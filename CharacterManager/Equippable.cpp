@@ -43,6 +43,43 @@ int Equippable::slots_to_int(Slots slot)
 	}
 }
 
+std::string Equippable::slots_to_string(Slots slot)
+{
+	switch (slot)
+	{
+	case Slots::Head:
+		return "Head";
+	case Slots::Headband:
+		return "Headband";
+	case Slots::Eyes:
+		return "Eyes";
+	case Slots::Shoulders:
+		return "Shoulders";
+	case Slots::Neck:
+		return "Neck";
+	case Slots::Chest:
+		return "Chest";
+	case Slots::Body:
+		return "Body";
+	case Slots::Armor:
+		return "Armor";
+	case Slots::Belt:
+		return "Belt";
+	case Slots::Wrists:
+		return "Wrist";
+	case Slots::Hands:
+		return "Hands";
+	case Slots::RRing:
+		return "Right Ring";
+	case Slots::LRing:
+		return "Left Ring";
+	case Slots::Feet:
+		return "Feet";
+	default:
+		return "Slotless";
+	}
+}
+
 Slots Equippable::int_to_slot(int index)
 {
 	switch (index)
@@ -115,4 +152,31 @@ double Equippable::total_weight()
 		ret += it.second->total_weight();
 	}
 	return ret;
+}
+
+std::string Equippable::print_gear_bag()
+{
+	std::string printout;
+	for (auto it : gear_bag)
+	{
+		printout += it.second->print_name() + " x " + std::to_string(it.second->quantity_left()) + '\n';
+	}
+	return printout;
+}
+
+std::string Equippable::print_worn()
+{
+	std::string printout;
+	for (auto it : worn)
+	{
+		if (!it) continue;
+		printout += slots_to_string(it->give_slot()) + " : " + it->print_name() + '\n';
+	}
+	return printout;
+}
+
+
+std::string Equippable::print()
+{
+	return "";
 }

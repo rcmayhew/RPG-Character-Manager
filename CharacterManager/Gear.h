@@ -20,6 +20,9 @@ public:
 	// lowers the quantity of the item by one
 	// is changed by wearable and weapons classes
 	virtual void use();
+	
+	// Returns the slot that the item is
+	Slots give_slot();
 	virtual ~Gear();
 };
 

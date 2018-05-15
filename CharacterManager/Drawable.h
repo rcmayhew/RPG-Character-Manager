@@ -21,6 +21,7 @@ private:
 	// this caontains and manages all weapons and trask weapons that are drawn
 	// magic ativation will have its own caller
 	Sheaths sheath;
+
 	// this holds all weapons that are drawn
 	// it should never be larger than 4
 	// and should only be accessed with Hands enum
@@ -32,13 +33,13 @@ private:
 	// converts from int to hands
 	Hands int_to_hands(int);
 
+	// Returns the string for each hand slot
+	std::string int_to_string(int index);
+	
+public:
 	// check to see if an object is in the sheath
 	bool found(Weapons);
 
-	// if weapon exist in the sheath, this selects the pointer in the Sheaths
-	Weapons select(std::string);
-	
-public:
 	// add weapon to the sheath
 	void add_weapon(Weapons a);
 
@@ -56,6 +57,12 @@ public:
 
 	// print out the current weapons that are housed in the collection and that are drawn
 	std::string print();
+
+	// Returns a string holding all the drawn weapons
+	std::string print_drawn();
+
+	// Returns a string holding all weapons in inventory
+	std::string print_sheath();
 
 	// gives the total weight of all items in the collection
 	virtual double total_weight();
