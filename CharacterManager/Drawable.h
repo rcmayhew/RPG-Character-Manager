@@ -43,16 +43,17 @@ public:
 	// add weapon to the sheath
 	void add_weapon(Weapons a);
 
+	///////////////////////////
 	Returns draw_weapons(Hands, Weapons);
 
 	// checks and removes item if it is in the sheath
 	Returns remove_weapon(Weapons a);
 
 	// use weapon
-	// NEEDS TO BE FIXED AFTER THE ATTACK CALLER CLASS IS BUILT
+	/////////////////////
 	int use_weapon_main();
 
-	// use weapon
+	////////////////////////
 	Returns use_weapon_all();
 
 	// print out the current weapons that are housed in the collection and that are drawn

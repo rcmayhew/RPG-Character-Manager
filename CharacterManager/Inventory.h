@@ -19,7 +19,8 @@ public:
 	void add_item(Items);
 	void add_item(Ammos);
 	double total_weight();
-	std::string print();
+	std::string print_status();
+	std::string print_contents();
 	Inventory();
 	~Inventory();
 };

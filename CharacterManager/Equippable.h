@@ -45,7 +45,7 @@ public:
 	//  adds armor to the inventory
 	void add_armor(Gears armor);
 	
-	// equips armor
+	/////////////////////////////
 	void equips_armor(Gears armor);
 	
 	//gives a print out of all objects in the gear_bag
