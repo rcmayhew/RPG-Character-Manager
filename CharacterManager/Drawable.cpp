@@ -118,7 +118,7 @@ void Drawable::add_weapon(Weapons weapon)
 std::string Drawable::print_drawn()
 {
 	std::string printout;
-	for (auto i = 0; i < drawn.size(); ++i)
+	for (unsigned int i = 0; i < drawn.size(); ++i)
 	{
 		if (drawn.at(i)) continue;
 		printout += int_to_string(i) + " : " + drawn.at(i)->print_name() + '\n';

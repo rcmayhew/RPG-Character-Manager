@@ -4,7 +4,7 @@
 #include <memory>
 #include <unordered_map>
 
-// /typedefs for easier readiblity
+// typedefs for easier readiblity
 // Element is for a weapon type and the interface class
 typedef std::shared_ptr<Item> Items;
 // unordered_map that uses the Element name for the key
