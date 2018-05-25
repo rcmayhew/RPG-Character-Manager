@@ -20,5 +20,6 @@ public:
 	RangedClass type();
 	Ammo& operator+=(std::shared_ptr<Ammo>);
 	virtual std::string print();
+	void fire();
 };
 

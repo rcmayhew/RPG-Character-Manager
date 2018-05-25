@@ -49,6 +49,18 @@ RangedClass Ammo::type()
 	return ranged_class;
 }
 
+void Ammo::fire()
+{
+	if (quantity > 0)
+	{
+		quantity--;
+	}
+	else
+	{
+		quantity = 0;
+	}
+}
+
 std::string Ammo::print()
 {
 	std::string printout;

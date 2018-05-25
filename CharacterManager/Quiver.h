@@ -34,10 +34,12 @@ public:
 	
 	// removes an elment by object
 	// /needs to change return type to Returns
-	void remove_ammo(Ammos a);
+	void remove_all_ammo(Ammos a);
+
+	void remove_one_ammo(std::string);
 	
 	// removes an elment by stirng
-	void remove_ammo(std::string);
+	void remove_all_ammo(std::string);
 	
 	// use ammo
 	Returns use_ammo();

@@ -5,12 +5,20 @@
 // #include "../CharacterManager/Quiver.cpp"
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
-namespace QuiverTest1
+namespace Tests
 {		
 	TEST_CLASS(Quiver_Tests)
 	{
 	public:
 		
+		TEST_METHOD(Quiver_add_item)
+		{
+			auto quiver = std::make_shared<Quiver>();
+			auto arrow0 = std::make_shared<Ammo>();
+
+			quiver->add_ammo(arrow0);
+		}
+
 		TEST_METHOD(Quiver_total_weight)
 		{
 			//  arrange
@@ -33,11 +41,31 @@ namespace QuiverTest1
 			Assert::AreEqual(expeted, actual);
 
 		}
+
 		TEST_METHOD(Quiver_add_same_item)
 		{
+			auto quiver = std::make_shared<Quiver>();
+			auto arrow0 = std::make_shared<Ammo>();
+			auto arrow1 = std::make_shared<Ammo>();
 
+			quiver->add_ammo(arrow0);
+			quiver->add_ammo(arrow1);
+
+			Assert::AreEqual(arrow0->quantity_left(), 2);
 		}
-			
+
+		TEST_METHOD(Quiver_add_same_item_total_wieght)
+		{
+			auto quiver = std::make_shared<Quiver>();
+			auto arrow0 = std::make_shared<Ammo>();
+			auto arrow1 = std::make_shared<Ammo>();
+
+			quiver->add_ammo(arrow0);
+			quiver->add_ammo(arrow1);
+			double weight = 0.30;
+
+			Assert::AreEqual(quiver->total_weight(), weight);
+		}
 
 	};
 }

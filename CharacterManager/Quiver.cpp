@@ -67,12 +67,22 @@ Returns Quiver::select_ammo(Ammos a)
 	
 }
 
-void Quiver::remove_ammo(Ammos a)
+void Quiver::remove_one_ammo(std::string name)
+{
+	auto arrow = arrow_holder.at(name);
+	arrow->fire();
+	if (arrow->quantity_left() < 1)
+	{
+		arrow_holder.erase(arrow->print_name());
+	}
+}
+
+void Quiver::remove_all_ammo(Ammos a)
 {
 	arrow_holder.erase(a->print_name());
 }
 
-void Quiver::remove_ammo(std::string name)
+void Quiver::remove_all_ammo(std::string name)
 {
 	arrow_holder.erase(name);
 }
