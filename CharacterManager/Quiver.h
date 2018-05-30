@@ -30,7 +30,7 @@ public:
 	void add_ammo(Ammos a);
 	
 	// makes sure the found Ammos is in the map
-	bool found(Ammos);
+	bool found(std::string);
 	
 	// removes an elment by object
 	// /needs to change return type to Returns

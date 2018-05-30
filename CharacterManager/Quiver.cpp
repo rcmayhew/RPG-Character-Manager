@@ -23,7 +23,7 @@ Available Quiver::search_ammo(RangedClass given_type)
 void Quiver::add_ammo(Ammos a)
 {
 	
-	if (found(a))
+	if (found(a->print_name()))
 	{
 		// if the selected ammo is of the same name
 		// then it add uses(ammor amount) to the item
@@ -58,7 +58,7 @@ Returns Quiver::use_ammo()
 
 Returns Quiver::select_ammo(Ammos a)
 {
-	if (found(a))
+	if (found(a->print_name()))
 	{
 		current = a;
 		return Returns::Exist;
@@ -87,9 +87,9 @@ void Quiver::remove_all_ammo(std::string name)
 	arrow_holder.erase(name);
 }
 
-bool Quiver::found(Ammos a)
+bool Quiver::found(std::string name)
 {
-	if (arrow_holder.find(a->print_name()) == arrow_holder.end()) return false;
+	if (arrow_holder.find(name) == arrow_holder.end()) return false;
 	return true;
 }
 

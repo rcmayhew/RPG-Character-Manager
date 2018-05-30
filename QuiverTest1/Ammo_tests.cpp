@@ -1,7 +1,5 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
-#include <iostream>
-#include <memory>
 #include "../CharacterManager/Ammo.h"
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
