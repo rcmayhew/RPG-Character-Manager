@@ -27,7 +27,7 @@ std::string Melee::print()
 	std::string printout;
 	printout = name + '\t'
 		+ std::to_string(cost) + " gp\t"
-		+ base_damage.to_string() + '\t'
+		+ base_damage.print_name() + '\t'
 		+ print_crit() + '\t'
 		+ std::to_string(weight) + " lbs. \n"
 		+ description;

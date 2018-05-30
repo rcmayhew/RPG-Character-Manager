@@ -46,7 +46,7 @@ std::string Ranged::print()
 	std::string printout;
 	printout = name + '\t'
 		+ std::to_string(cost) + " gp\t"
-		+ base_damage.to_string() + print_str() + '\t'
+		+ base_damage.print_name() + print_str() + '\t'
 		+ print_crit() + "\t"
 		+ std::to_string(weight) + " lbs. \n"
 		+ description;
